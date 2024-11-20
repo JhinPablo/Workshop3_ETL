@@ -8,8 +8,8 @@ WORKDIR /app
 COPY requirements.txt .
 RUN pip install --no-cache-dir -r requirements.txt
 
-# Copia el script del producer al contenedor
+# Copia el script del consumer al contenedor 
 COPY . .
 
 # Ejecuta el script del producer
-CMD ["python", "producer.py"]
+CMD ["python", "consumer.py"]
